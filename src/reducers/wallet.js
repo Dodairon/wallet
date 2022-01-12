@@ -1,1 +1,19 @@
-// Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
+const initialState = { expenses: [] };
+
+const PRICE_SUCCESS = 'PRICE_SUCCESS';
+const PRICE_FAIL = 'PRICE_FAIL';
+const GET_PRICE = 'GET_PRICE';
+
+const wallet = (state = initialState, action) => {
+  switch (action.type) {
+  case GET_PRICE:
+    return { ...state };
+  case PRICE_SUCCESS:
+    return { ...state, expenses: [action.payload] };
+  case PRICE_FAIL:
+    return { ...state };
+  default: return state;
+  }
+};
+
+export default wallet;
