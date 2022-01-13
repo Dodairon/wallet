@@ -8,7 +8,14 @@ class FiltersWallet extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // expenses: [],
+      // expenses: [{
+      //   "id": "",
+      //   "value": "",
+      //   "description": "",
+      //   "currency": "",
+      //   "method": "",
+      //   "tag": "",
+      //   "exchangeRates": {}}],
       moedas: [],
     };
 
