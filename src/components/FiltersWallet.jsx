@@ -130,7 +130,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 FiltersWallet.propTypes = {
-  getPrice: PropTypes.func.isRequired,
   addExpenses: PropTypes.func.isRequired,
 };
 
