@@ -3,7 +3,7 @@ const initialState = { expenses: [], currencies: {} };
 const PRICE_SUCCESS = 'PRICE_SUCCESS';
 const PRICE_FAIL = 'PRICE_FAIL';
 const GET_PRICE = 'GET_PRICE';
-const ADD_EXPENSES = 'ADD_EXPENSES';
+// const ADD_EXPENSES = 'ADD_EXPENSES';
 
 const wallet = (state = initialState, action) => {
   switch (action.type) {
