@@ -12,7 +12,7 @@ class LoginButton extends React.Component {
           buttonDisabled ? `bg-red hover:bg-gray-10 text-gray-100font-semibold
                 py-2 px-4 border border-gray-100 rounded shadow`
             : `bg-white hover:bg-gray-100 text-gray-800font-semibold
-                py-2 px-4 border border-gray-400 rounded shadow`
+                py-2 px-4 border border-gray-500 rounded shadow`
         }
         type="button"
         disabled={ buttonDisabled }
