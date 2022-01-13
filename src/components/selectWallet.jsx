@@ -3,18 +3,20 @@ import PropTypes from 'prop-types';
 
 class SelectWallet extends React.Component {
   render() {
-    const { label, valluesArray, dataTestid } = this.props;
+    const { id, label, valluesArray, dataTestid, value, handleChange } = this.props;
     return (
-      <label htmlFor={ label }>
+      <label htmlFor={ id }>
         <span>
           { label }
         </span>
         <select
+          value={ value }
           data-testid={ dataTestid }
-          id={ label }
+          id={ id }
+          onChange={ (event) => handleChange(event) }
         >
-          {valluesArray.map((value, index) => (
-            <option key={ index }>{value}</option>
+          {valluesArray.map((values, index) => (
+            <option key={ index }>{values}</option>
           ))}
         </select>
       </label>
@@ -23,9 +25,13 @@ class SelectWallet extends React.Component {
 }
 
 SelectWallet.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   valluesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
   dataTestid: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+
 };
 
 export default SelectWallet;

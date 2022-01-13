@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import * as ACT from '../actions';
 
 class ButtonWallet extends React.Component {
   render() {
-    const { text, getPrice } = this.props;
+    const { text, handleClick } = this.props;
     return (
       <button
         type="button"
-        onClick={ () => {
-          getPrice();
-        } }
+        onClick={ () => handleClick() }
       >
         {text}
       </button>
@@ -19,14 +15,9 @@ class ButtonWallet extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => (state);
-const mapDispatchToProps = (dispatch) => ({
-  getPrice: () => dispatch(ACT.getPrice()),
-});
-
 ButtonWallet.propTypes = {
   text: PropTypes.string.isRequired,
-  getPrice: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ButtonWallet);
+export default ButtonWallet;
